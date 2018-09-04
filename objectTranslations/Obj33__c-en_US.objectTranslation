@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Obj33</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Obj33s</value>
+    </caseValues>
+    <fields>
+        <label><!-- Fld33 --></label>
+        <name>Fld33__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestFieldProfile2 --></label>
+        <name>TestFieldProfile2__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestFieldProfile3 --></label>
+        <name>TestFieldProfile3__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestFieldProfile4 --></label>
+        <name>TestFieldProfile4__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestFieldProfile5 --></label>
+        <name>TestFieldProfile5__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestFieldProfile6 --></label>
+        <name>TestFieldProfile6__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestFieldProfile --></label>
+        <name>TestFieldProfile__c</name>
+    </fields>
+    <fields>
+        <label><!-- testField7 --></label>
+        <name>testField7__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

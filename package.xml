@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <version>43.0</version>
+    <types>
+        <members>Apex1</members>
+        <members>Apex2</members>
+        <members>Apex3</members>
+        <members>Computer3</members>
+        <members>Deploy1</members>
+        <members>DeployClass</members>
+        <name>ApexClass</name>
+    </types>
     <types>
         <members>AppSwitcher</members>
         <members>Salesforce1</members>
@@ -22,10 +30,6 @@
         <name>AutoResponseRules</name>
     </types>
     <types>
-        <members>CPQIntegrationUserCert</members>
-        <name>Certificate</name>
-    </types>
-    <types>
         <members>DataCloudGeoLocation</members>
         <name>CleanDataService</name>
     </types>
@@ -34,16 +38,10 @@
         <name>Community</name>
     </types>
     <types>
-        <members>CPQIntegrationUserApp</members>
-        <name>ConnectedApp</name>
-    </types>
-    <types>
         <members>standard__AppLauncher</members>
         <members>standard__Chatter</members>
         <members>standard__Community</members>
         <members>standard__Content</members>
-        <members>standard__Insights</members>
-        <members>standard__LightningBolt</members>
         <members>standard__LightningInstrumentation</members>
         <members>standard__LightningSales</members>
         <members>standard__LightningSalesConsole</members>
@@ -57,17 +55,143 @@
         <name>CustomApplication</name>
     </types>
     <types>
+        <members>Account.Active__c</members>
+        <members>Account.AutorabitExtId__c</members>
+        <members>Account.CustomerPriority__c</members>
+        <members>Account.NumberofLocations__c</members>
+        <members>Account.SLAExpirationDate__c</members>
+        <members>Account.SLASerialNumber__c</members>
+        <members>Account.SLA__c</members>
+        <members>Account.UpsellOpportunity__c</members>
+        <members>Case.AutorabitExtId__c</members>
+        <members>Case.EngineeringReqNumber__c</members>
+        <members>Case.PotentialLiability__c</members>
+        <members>Case.Product__c</members>
+        <members>Case.SLAViolation__c</members>
+        <members>Contact.AutorabitExtId__c</members>
+        <members>Contact.Languages__c</members>
+        <members>Contact.Level__c</members>
+        <members>Goal.OrigGoalId__c</members>
+        <members>Lead.CurrentGenerators__c</members>
+        <members>Lead.NumberofLocations__c</members>
+        <members>Lead.Primary__c</members>
+        <members>Lead.ProductInterest__c</members>
+        <members>Lead.SICCode__c</members>
+        <members>Metric.OrigMetricId__c</members>
+        <members>Obj33__c.Fld33__c</members>
+        <members>Obj33__c.TestFieldProfile2__c</members>
+        <members>Obj33__c.TestFieldProfile3__c</members>
+        <members>Obj33__c.TestFieldProfile4__c</members>
+        <members>Obj33__c.TestFieldProfile5__c</members>
+        <members>Obj33__c.TestFieldProfile6__c</members>
+        <members>Obj33__c.TestFieldProfile__c</members>
+        <members>Obj33__c.testField7__c</members>
+        <members>Opportunity.AutorabitExtId__c</members>
+        <members>Opportunity.CurrentGenerators__c</members>
+        <members>Opportunity.DeliveryInstallationStatus__c</members>
+        <members>Opportunity.MainCompetitors__c</members>
+        <members>Opportunity.OrderNumber__c</members>
+        <members>Opportunity.TrackingNumber__c</members>
+        <members>X12560__c.RecordNumber__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Test1</members>
+        <members>Test2</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
         <members>CustomLabels</members>
         <name>CustomLabels</name>
     </types>
     <types>
-        <members>Build_spain__c-en_US</members>
+        <members>Account</members>
+        <members>AccountCleanInfo</members>
+        <members>AccountContactRole</members>
+        <members>Activity</members>
+        <members>Asset</members>
+        <members>AssetRelationship</members>
+        <members>AssistantProgress</members>
+        <members>Campaign</members>
+        <members>CampaignMember</members>
+        <members>Case</members>
+        <members>CaseContactRole</members>
+        <members>CollaborationGroup</members>
+        <members>CollaborationGroupMember</members>
+        <members>CommitValidate__mdt</members>
+        <members>Commit__mdt</members>
+        <members>Contact</members>
+        <members>ContactCleanInfo</members>
+        <members>ContentVersion</members>
+        <members>Contract</members>
+        <members>ContractContactRole</members>
+        <members>DandBCompany</members>
+        <members>DeployTests__c</members>
+        <members>Deploy__mdt</members>
+        <members>DuplicateRecordItem</members>
+        <members>DuplicateRecordSet</members>
+        <members>EmailMessage</members>
+        <members>Event</members>
+        <members>ExchangeUserMapping</members>
+        <members>FeedItem</members>
+        <members>ForecastingCategoryMapping</members>
+        <members>Idea</members>
+        <members>Lead</members>
+        <members>LeadCleanInfo</members>
+        <members>Macro</members>
+        <members>MacroAction</members>
+        <members>MacroInstruction</members>
+        <members>Obj33__c</members>
+        <members>Opportunity</members>
+        <members>OpportunityCompetitor</members>
+        <members>OpportunityContactRole</members>
+        <members>OpportunityLineItem</members>
+        <members>Order</members>
+        <members>OrderItem</members>
+        <members>OrgDeleteRequest</members>
+        <members>PartnerRole</members>
+        <members>Pricebook2</members>
+        <members>PricebookEntry</members>
+        <members>Product2</members>
+        <members>QuickText</members>
+        <members>RecordAction</members>
+        <members>Scorecard</members>
+        <members>ScorecardAssociation</members>
+        <members>ScorecardMetric</members>
+        <members>Site</members>
+        <members>SocialPersona</members>
+        <members>Solution</members>
+        <members>StreamingChannel</members>
+        <members>Task</members>
+        <members>Territory2</members>
+        <members>Territory2Model</members>
+        <members>TestMTD__mdt</members>
+        <members>Topic</members>
+        <members>TopicAssignment</members>
+        <members>User</members>
+        <members>UserProvisioningRequest</members>
+        <members>UserTerritory2Association</members>
+        <members>X12560_1__c</members>
+        <members>X12560__c</members>
+        <members>mdt12629__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>CommitValidate__mdt-en_US</members>
+        <members>Commit__mdt-en_US</members>
         <members>DeployTests__c-en_US</members>
-        <members>New_prod__c-en_US</members>
-        <members>Spain_PROD__c-en_US</members>
-        <members>X11878__c-en_US</members>
-        <members>obj__c-en_US</members>
+        <members>Deploy__mdt-en_US</members>
+        <members>Obj33__c-en_US</members>
+        <members>TestMTD__mdt-en_US</members>
+        <members>X12560_1__c-en_US</members>
+        <members>X12560__c-en_US</members>
+        <members>mdt12629__mdt-en_US</members>
         <name>CustomObjectTranslation</name>
+    </types>
+    <types>
+        <members>X12560_1__c</members>
+        <members>X12560__c</members>
+        <name>CustomTab</name>
     </types>
     <types>
         <members>Account.Standard_Account_Duplicate_Rule</members>
@@ -106,8 +230,12 @@
         <name>FlexiPage</name>
     </types>
     <types>
-        <members>DE Default</members>
+        <members>DE Defaulté</members>
         <name>HomePageLayout</name>
+    </types>
+    <types>
+        <members>sf_com_apps</members>
+        <name>InstalledPackage</name>
     </types>
     <types>
         <members>Account-Account %28Marketing%29 Layout</members>
@@ -116,7 +244,6 @@
         <members>Account-Account Layout</members>
         <members>Asset-Asset Layout</members>
         <members>AssetRelationship-Asset Relationship Layout</members>
-        <members>Build_spain__c-Build Layout</members>
         <members>Campaign-Campaign Layout</members>
         <members>CampaignMember-Campaign Member Page Layout</members>
         <members>Case-Case %28Marketing%29 Layout</members>
@@ -124,6 +251,8 @@
         <members>Case-Case %28Support%29 Layout</members>
         <members>Case-Case Layout</members>
         <members>CaseClose-Close Case Layout</members>
+        <members>CommitValidate__mdt-CommitValidate Layout</members>
+        <members>Commit__mdt-Commit Layout</members>
         <members>Contact-Contact %28Marketing%29 Layout</members>
         <members>Contact-Contact %28Sales%29 Layout</members>
         <members>Contact-Contact %28Support%29 Layout</members>
@@ -132,9 +261,12 @@
         <members>Contract-Contract Layout</members>
         <members>DandBCompany-D%26B Company Layout</members>
         <members>DeployTests__c-DeployTest Layout</members>
+        <members>DeployTests__c-deployé</members>
+        <members>Deploy__mdt-Deploy Layout</members>
         <members>DuplicateRecordSet-Duplicate Record Set Layout</members>
         <members>EmailMessage-Email Message Layout</members>
         <members>Event-Event Layout</members>
+        <members>FeedItem-Feed Item Layout</members>
         <members>Global-Global Layout</members>
         <members>Idea-Idea Layout</members>
         <members>Lead-Lead %28Marketing%29 Layout</members>
@@ -142,7 +274,8 @@
         <members>Lead-Lead %28Support%29 Layout</members>
         <members>Lead-Lead Layout</members>
         <members>Macro-Macro Layout</members>
-        <members>New_prod__c-New prod Layout</members>
+        <members>Obj33__c-Obj33 Layout</members>
+        <members>ObjectTerritory2AssignmentRule-Object Territory Assignment Rule Layout</members>
         <members>Opportunity-Opportunity %28Marketing%29 Layout</members>
         <members>Opportunity-Opportunity %28Sales%29 Layout</members>
         <members>Opportunity-Opportunity %28Support%29 Layout</members>
@@ -158,15 +291,95 @@
         <members>ScorecardAssociation-Scorecard Association Layout</members>
         <members>ScorecardMetric-Scorecard Metric Layout</members>
         <members>Solution-Solution Layout</members>
-        <members>Spain_PROD__c-Spain PROD Layout</members>
         <members>Task-Task Layout</members>
+        <members>Territory2-Territory Layout</members>
+        <members>Territory2Model-Territory Model Layout</members>
+        <members>Territory2Type-Territory Type Layout</members>
+        <members>TestMTD__mdt-TestMTD Layout</members>
         <members>User-User Layout</members>
         <members>UserProvAccount-User Provisioning Account Layout</members>
         <members>UserProvisioningLog-User Provisioning Log Layout</members>
         <members>UserProvisioningRequest-User Provisioning Request Layout</members>
-        <members>X11878__c-11878 Layout</members>
-        <members>obj__c-obj Layout</members>
+        <members>X12560_1__c-12560_1 Layout</members>
+        <members>X12560__c-12560 Layout</members>
+        <members>mdt12629__mdt-mdt12629 Layout</members>
         <name>Layout</name>
+    </types>
+    <types>
+        <members>Account.AllAccounts</members>
+        <members>Account.MyAccounts</members>
+        <members>Account.NewLastWeek</members>
+        <members>Account.NewThisWeek</members>
+        <members>Account.PlatinumandGoldSLACustomers</members>
+        <members>Activity.AllActivities</members>
+        <members>Activity.MyActivities</members>
+        <members>Activity.TodaysTasks</members>
+        <members>Activity.UpcomingEvents</members>
+        <members>Asset.AllAssets</members>
+        <members>Campaign.AllActiveCampaigns</members>
+        <members>Campaign.MyActiveCampaigns</members>
+        <members>Case.AllClosedCases</members>
+        <members>Case.AllOpenCases</members>
+        <members>Case.MyCases</members>
+        <members>Case.MyOpenCases</members>
+        <members>CollaborationGroup.All_ChatterGroups</members>
+        <members>Contact.AllContacts</members>
+        <members>Contact.BirthdaysThisMonth</members>
+        <members>Contact.MyContacts</members>
+        <members>Contact.NewLastWeek</members>
+        <members>Contact.NewThisWeek</members>
+        <members>Contract.AllActivatedContracts</members>
+        <members>Contract.AllContracts</members>
+        <members>Contract.AllDraftContracts</members>
+        <members>Contract.AllInApprovalContracts</members>
+        <members>Contract.MyActivatedContracts</members>
+        <members>Contract.MyDraftContracts</members>
+        <members>Contract.MyInApprovalContracts</members>
+        <members>Lead.AllOpenLeads</members>
+        <members>Lead.MyUnreadLeads</members>
+        <members>Lead.TodaysLeads</members>
+        <members>Lead.ViewCustom1</members>
+        <members>Lead.ViewCustom2</members>
+        <members>Opportunity.AllOpportunities</members>
+        <members>Opportunity.ClosingNextMonth</members>
+        <members>Opportunity.ClosingThisMonth</members>
+        <members>Opportunity.Default_Opportunity_Pipeline</members>
+        <members>Opportunity.MyOpportunities</members>
+        <members>Opportunity.NewLastWeek</members>
+        <members>Opportunity.NewThisWeek</members>
+        <members>Opportunity.Private</members>
+        <members>Opportunity.Won</members>
+        <members>Order.AllActivatedOrders</members>
+        <members>Order.AllDraftOrders</members>
+        <members>Order.AllOrders</members>
+        <members>Product2.AllProducts</members>
+        <members>Scorecard.AllScorecards</members>
+        <members>Scorecard.MyScorecards</members>
+        <members>SocialPersona.AllSocialPersonas</members>
+        <members>Solution.AllReviewedSolutions</members>
+        <members>Solution.AllUnreviewedSolutions</members>
+        <members>Task.CompletedTasks</members>
+        <members>Task.DelegatedTasks</members>
+        <members>Task.OpenTasks</members>
+        <members>Task.OverdueTasks</members>
+        <members>Task.RecurringTasks</members>
+        <members>Task.TodaysTasks</members>
+        <members>Task.UnscheduledTasks</members>
+        <members>User.ActiveUsers</members>
+        <members>User.AdminUsers</members>
+        <members>User.AllUsers</members>
+        <members>WorkFeedbackRequest.AboutTopics</members>
+        <members>WorkFeedbackRequest.All</members>
+        <members>WorkFeedbackTemplate.All</members>
+        <members>X12560_1__c.All</members>
+        <members>X12560__c.All</members>
+        <name>ListView</name>
+    </types>
+    <types>
+        <members>Account.Standard_Account_Match_Rule_v1_0</members>
+        <members>Contact.Standard_Contact_Match_Rule_v1_1</members>
+        <members>Lead.Standard_Lead_Match_Rule_v1_0</members>
+        <name>MatchingRule</name>
     </types>
     <types>
         <members>Account</members>
@@ -179,7 +392,6 @@
         <members>Analytics Cloud Integration User</members>
         <members>Analytics Cloud Security User</members>
         <members>Authenticated Website</members>
-        <members>CPQ Integration User</members>
         <members>Chatter External User</members>
         <members>Chatter Free User</members>
         <members>Chatter Moderator User</members>
@@ -212,6 +424,7 @@
         <members>SolutionManager</members>
         <members>Standard</members>
         <members>StandardAul</members>
+        <members>Test Community</members>
         <members>Work%2Ecom Only User</members>
         <name>Profile</name>
     </types>
@@ -231,6 +444,7 @@
         <members>NewNote</members>
         <members>NewOpportunity</members>
         <members>NewTask</members>
+        <members>Opportunity.TestOrder</members>
         <members>SendEmail</members>
         <members>Task.Defer</members>
         <members>Task.Defer_0</members>
@@ -241,6 +455,11 @@
         <members>Task.UpdateStatus</members>
         <members>Task.UpdateStatus_0</members>
         <name>QuickAction</name>
+    </types>
+    <types>
+        <members>Metric.Completion</members>
+        <members>Metric.Progress</members>
+        <name>RecordType</name>
     </types>
     <types>
         <members>ApexDevNet</members>
@@ -273,6 +492,131 @@
     </types>
     <types>
         <members>Account</members>
+        <members>Asset</members>
+        <members>Campaign</members>
+        <members>Case</members>
+        <members>Contact</members>
+        <members>DeployTests__c</members>
+        <members>FlowInterview</members>
+        <members>Lead</members>
+        <members>ListEmail</members>
+        <members>Obj33__c</members>
+        <members>Opportunity</members>
+        <members>Order</members>
+        <members>User</members>
+        <members>X12560_1__c</members>
+        <members>X12560__c</members>
+        <name>SharingRules</name>
+    </types>
+    <types>
+        <members>AccountContactMultiRoles</members>
+        <members>AccountContactRole</members>
+        <members>AccountOwnership</members>
+        <members>AccountRating</members>
+        <members>AccountType</members>
+        <members>AddressCountryCode</members>
+        <members>AddressStateCode</members>
+        <members>AssetStatus</members>
+        <members>CampaignMemberStatus</members>
+        <members>CampaignStatus</members>
+        <members>CampaignType</members>
+        <members>CaseContactRole</members>
+        <members>CaseOrigin</members>
+        <members>CasePriority</members>
+        <members>CaseReason</members>
+        <members>CaseStatus</members>
+        <members>CaseType</members>
+        <members>ContactRole</members>
+        <members>ContractContactRole</members>
+        <members>ContractStatus</members>
+        <members>EntitlementType</members>
+        <members>EventSubject</members>
+        <members>EventType</members>
+        <members>FiscalYearPeriodName</members>
+        <members>FiscalYearPeriodPrefix</members>
+        <members>FiscalYearQuarterName</members>
+        <members>FiscalYearQuarterPrefix</members>
+        <members>IdeaMultiCategory</members>
+        <members>IdeaStatus</members>
+        <members>IdeaThemeStatus</members>
+        <members>Industry</members>
+        <members>InvoiceStatus</members>
+        <members>LeadSource</members>
+        <members>LeadStatus</members>
+        <members>OpportunityCompetitor</members>
+        <members>OpportunityStage</members>
+        <members>OpportunityType</members>
+        <members>OrderType</members>
+        <members>PartnerRole</members>
+        <members>Product2Family</members>
+        <members>QuickTextCategory</members>
+        <members>QuickTextChannel</members>
+        <members>QuoteStatus</members>
+        <members>SalesTeamRole</members>
+        <members>Salutation</members>
+        <members>ServiceContractApprovalStatus</members>
+        <members>SocialPostClassification</members>
+        <members>SocialPostEngagementLevel</members>
+        <members>SocialPostReviewedStatus</members>
+        <members>SolutionStatus</members>
+        <members>TaskPriority</members>
+        <members>TaskStatus</members>
+        <members>TaskSubject</members>
+        <members>TaskType</members>
+        <members>WorkOrderLineItemStatus</members>
+        <members>WorkOrderPriority</members>
+        <members>WorkOrderStatus</members>
+        <name>StandardValueSet</name>
+    </types>
+    <types>
+        <members>Case12251</members>
+        <name>StaticResource</name>
+    </types>
+    <types>
+        <members>Test_Territory_Model.Test_Territory_Hierarchy</members>
+        <name>Territory2</name>
+    </types>
+    <types>
+        <members>Test_Territory_Model</members>
+        <name>Territory2Model</name>
+    </types>
+    <types>
+        <members>Test_Territory_Model.Test_Territory_Rule1</members>
+        <name>Territory2Rule</name>
+    </types>
+    <types>
+        <members>Test_Territory</members>
+        <name>Territory2Type</name>
+    </types>
+    <types>
+        <members>Account</members>
+        <members>Asset</members>
+        <members>Campaign</members>
+        <members>Case</members>
+        <members>Contact</members>
+        <members>ContentDocument</members>
+        <members>Contract</members>
+        <members>DeployTests__c</members>
+        <members>Event</members>
+        <members>Lead</members>
+        <members>Obj33__c</members>
+        <members>Opportunity</members>
+        <members>Order</members>
+        <members>Solution</members>
+        <members>Task</members>
+        <members>X12560_1__c</members>
+        <members>X12560__c</members>
+        <name>TopicsForObjects</name>
+    </types>
+    <types>
+        <members>Account.Billing</members>
+        <members>Campaign.ViewCampaignInfluenceReport</members>
+        <members>Case.UpsellCrosssellOpportunity</members>
+        <members>Opportunity.DeliveryStatus</members>
+        <name>WebLink</name>
+    </types>
+    <types>
+        <members>Account</members>
         <members>Activities</members>
         <members>Address</members>
         <members>BusinessHours</members>
@@ -299,28 +643,8 @@
         <members>Search</members>
         <members>Security</members>
         <members>SocialCustomerService</members>
+        <members>Territory2</members>
         <name>Settings</name>
     </types>
-    <types>
-        <members>Account</members>
-        <members>Asset</members>
-        <members>Build_spain__c</members>
-        <members>Campaign</members>
-        <members>Case</members>
-        <members>Contact</members>
-        <members>ContentDocument</members>
-        <members>Contract</members>
-        <members>DeployTests__c</members>
-        <members>Event</members>
-        <members>Lead</members>
-        <members>New_prod__c</members>
-        <members>Opportunity</members>
-        <members>Order</members>
-        <members>Solution</members>
-        <members>Spain_PROD__c</members>
-        <members>Task</members>
-        <members>X11878__c</members>
-        <members>obj__c</members>
-        <name>TopicsForObjects</name>
-    </types>
+    <version>43.0</version>
 </Package>

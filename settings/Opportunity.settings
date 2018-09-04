@@ -4,5 +4,5 @@
     <enableFindSimilarOpportunities>false</enableFindSimilarOpportunities>
     <enableOpportunityTeam>false</enableOpportunityTeam>
     <enableUpdateReminders>true</enableUpdateReminders>
-    <promptToAddProducts>false</promptToAddProducts>
+    <promptToAddProducts>true</promptToAddProducts>
 </OpportunitySettings>
