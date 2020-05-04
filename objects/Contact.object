@@ -375,7 +375,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Data_Quality_Score__c</fullName>
+        <fullName>Data_Quality__c</fullName>
         <externalId>false</externalId>
         <formula>IF( LEN( Phone) = 0, 0,20) + IF( LEN( Email) = 0, 0,20) + IF( LEN(MailingStreet) = 0, 0,20) + IF( LEN(Title) = 0, 0,20) + IF( ISPICKVAL(Salutation,&quot;&quot;), 0,20)</formula>
         <label>Data Quality Score</label>
@@ -438,7 +438,7 @@
         <trackHistory>true</trackHistory>
     </fields>
     <fields>
-        <fullName>Languages__c</fullName>
+        <fullName>Languages speak__c</fullName>
         <externalId>false</externalId>
         <label>Languages</label>
         <length>100</length>
