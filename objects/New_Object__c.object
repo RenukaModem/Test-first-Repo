@@ -154,7 +154,7 @@
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>Private</externalSharingModel>
     <fields>
-        <fullName>Contact__c</fullName>
+        <fullName>ContactID__c</fullName>
         <externalId>false</externalId>
         <label>Contact</label>
         <precision>18</precision>
@@ -165,7 +165,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Drivers_License__c</fullName>
+        <fullName>Drivers_License_status__c</fullName>
         <externalId>false</externalId>
         <label>Drivers License</label>
         <length>16</length>
@@ -175,7 +175,7 @@
         <unique>false</unique>
     </fields>
     <fields>
-        <fullName>Field1__c</fullName>
+        <fullName>Field12345__c</fullName>
         <externalId>false</externalId>
         <label>Field1</label>
         <length>30</length>
