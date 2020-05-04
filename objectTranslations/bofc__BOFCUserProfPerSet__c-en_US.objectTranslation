@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- PROFILE ID --></label>
+        <name>bofc__PROFILE_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Name --></label>
+        <name>bofc__Profile_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- UserPermSets --></label>
+        <name>bofc__UserPermSets__c</name>
+    </fields>
+</CustomObjectTranslation>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>HRV_Template</name>
+    <publicFolderAccess>ReadWrite</publicFolderAccess>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+        <roleAndSubordinates>CustomerSupportInternational</roleAndSubordinates>
+        <roleAndSubordinates>CustomerSupportNorthAmerica</roleAndSubordinates>
+    </sharedTo>
+</EmailFolder>

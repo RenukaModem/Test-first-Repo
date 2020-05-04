@@ -1,0 +1,6 @@
+Hi {!Contact.FirstName},
+
+Thanks for reaching to support we will analyze your reported concern and update you the earliest.
+
+Thanks & Regards
+{!Account.Name}

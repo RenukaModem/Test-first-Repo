@@ -1,0 +1,3 @@
+<apex:page contentType="application/vnd.ms-excel#Layout.xls" cache="true">
+<c:BOFCPageLayoutDownloadMatrix />
+</apex:page>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Image URL --></label>
+        <name>bofc__Image_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Image --></label>
+        <name>bofc__Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- Popup First Time? --></label>
+        <name>bofc__Popup_First_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Popup Second Time? --></label>
+        <name>bofc__Popup_Second_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Redirect URL --></label>
+        <name>bofc__Redirect_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>bofc__Type__c</name>
+        <picklistValues>
+            <masterLabel>AboutToExpire</masterLabel>
+            <translation><!-- AboutToExpire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expire</masterLabel>
+            <translation><!-- Expire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Free</masterLabel>
+            <translation><!-- Free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Priority</masterLabel>
+            <translation><!-- Priority --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Version --></label>
+        <name>bofc__Version__c</name>
+        <picklistValues>
+            <masterLabel>FreeVersion</masterLabel>
+            <translation><!-- FreeVersion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FullVersion</masterLabel>
+            <translation><!-- FullVersion --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- # of mins --></label>
+        <name>bofc__of_mins__c</name>
+    </fields>
+</CustomObjectTranslation>

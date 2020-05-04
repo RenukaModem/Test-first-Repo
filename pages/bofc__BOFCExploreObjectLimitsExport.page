@@ -1,0 +1,3 @@
+<apex:page contentType="application/vnd.ms-excel#ExportObjectLimits.xls" cache="true" readOnly="true">
+<c:BOFCExploreObjectLimitsExportComp />
+</apex:page>

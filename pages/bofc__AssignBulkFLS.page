@@ -1,0 +1,4 @@
+<apex:page controller="bofc.AssignBulkFLS" action="{!init}" sidebar="false" showHeader="false">
+   
+
+</apex:page>

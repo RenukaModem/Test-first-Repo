@@ -1,0 +1,193 @@
+<apex:page controller="bofc.BOFCBulkFieldUpdateExcel" contentType="application/vnd.ms-excel#{!ObjectName}-Fields.xls" cache="true" action="{!FetchExistingFields}">
+<apex:outputText value="{!xlsHeader}"/>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+    <Style ss:ID="objectTitle">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Center" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="1" ss:Size="10" ss:Color="#ffffff" ss:Family="Calibri"/>
+        <Interior ss:Color="#1f497d" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="heading">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Center" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="1" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#b8cce4" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="simpleDataLeft">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Left" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="0" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="simpleDataRight">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Right" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="0" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="true">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Left" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="1" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#c6efce" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="false">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Left" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="1" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#ffc7ce" ss:Pattern="Solid"/>
+    </Style>
+ </Styles>
+    
+    <Worksheet ss:Name="{!ObjectName}">
+        <Table x:FullColumns="1" x:FullRows="1">
+            <Column ss:AutoFitWidth="1"  ss:Width="100" />
+            <Column ss:AutoFitWidth="1"  ss:Width="180" />
+            <Column ss:AutoFitWidth="1"  ss:Width="100" />
+            <Column ss:AutoFitWidth="1"  ss:Width="50" />
+            <Column ss:AutoFitWidth="1"  ss:Width="50" />
+            <Column ss:AutoFitWidth="1"  ss:Width="50" />
+            <Column ss:AutoFitWidth="1"  ss:Width="180" />
+            <Column ss:AutoFitWidth="1"  ss:Width="100" />
+            <Column ss:AutoFitWidth="1"  ss:Width="100" />
+            <Column ss:AutoFitWidth="1"  ss:Width="100" />
+            <Column ss:AutoFitWidth="1"  ss:Width="100" />
+            <Column ss:AutoFitWidth="1"  ss:Width="200" />
+            <Column ss:AutoFitWidth="1"  ss:Width="100" />
+            <Column ss:AutoFitWidth="1"  ss:Width="50" />
+            <Column ss:AutoFitWidth="1"  ss:Width="50" />
+            <Column ss:AutoFitWidth="1"  ss:Width="50" />
+            <Column ss:AutoFitWidth="1"  ss:Width="180" />
+            <Column ss:AutoFitWidth="1"  ss:Width="180" />
+            
+            
+                <Row>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Field Label</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Field Name</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Type</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Length</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Decimal Places</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Visible Lines</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Picklist Values</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Global Picklist ValueSet</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Default Value</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Display Format</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Starting Number</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Formula Details</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Related to (Parent Object)</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Required</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Unique</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >External Id</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Description</Data></Cell>
+                    <Cell ss:StyleID="heading"><Data ss:Type="String" >Help Text</Data></Cell>
+                </Row>
+                <apex:repeat value="{!lCow[0].cFields}" var="st" id="pgTable" >
+                <Row>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.label}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.fullname}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.type_x}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.Length}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.Scale}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.visibleLines}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.PICKWrapperValue}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.globalPicklistValueSet}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.DefaultValue}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.displayFormat}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.startingNumber}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.Formula}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.ReferenceTo}</Data></Cell>
+                    
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.Required}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.Unique}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.ExternalID}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.Description}</Data></Cell>
+                    <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!st.inlineHelpText}</Data></Cell>
+                    
+                   </Row>
+                </apex:repeat>
+            
+        </Table>
+    </Worksheet>
+    
+</Workbook>
+</apex:page>
+
+<!-- <apex:page controller="bofc.BOFCBulkFieldUpdateExcel" sidebar="false" showHeader="false" cache="false" action="{!FetchExistingFields}" standardStylesheets="false" readOnly="true" contentType="application/vnd.ms-excel; charset=Windows-1252#BOFCBulkFieldUpdateExcel.xls">
+            <table>
+            <tr> 
+                <td>Field Label </td>
+                <td>Field Name </td>
+                <td>Type </td>
+                <td>Length</td>
+                <td>Scale </td>
+                <td>Visible Lines </td>
+                <td>Picklist Values </td>
+                <td>Global Picklist Value Set</td>
+                <td>Default Value </td>
+                <td>Formula Details </td>
+                <td>Required </td>
+                <td>Unique </td>
+                <td>External Id </td>
+                <td>Description </td>
+                <td>InlineHelp Text </td>
+            </tr>
+              
+            <apex:repeat value="{!lCow[0].cFields}" var="st" id="pgTable" >
+              <tr>
+                  <td>{!st.Label}</td>
+                  <td>{!st.fullName}</td>
+                  <td>{!st.type_x} </td>
+                  <td>{!st.Length}</td>
+                  <td>{!st.Scale}</td>
+                  <td>{!st.visibleLines}</td>
+                  <td>
+                    {!st.PICKWrapperValue}
+                    </td>
+                  <td>{!st.globalPicklistValueSet}</td>  
+                  <td> {!st.DefaultValue}</td>
+                  <td>{!st.Formula}</td>
+                  <td>{!st.Required}</td>
+                  <td>{!st.Unique}</td>
+                  <td>{!st.ExternalID}</td>
+                  <td>{!st.Description}</td>
+                  <td>{!st.inlineHelpText}</td>
+             </tr>     
+    </apex:repeat>
+    </table>            
+    
+</apex:page>-->

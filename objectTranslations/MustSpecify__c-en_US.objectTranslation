@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>MustSpecify</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>MustSpecifies</value>
+    </caseValues>
+    <fields>
+        <label><!-- MustField1 --></label>
+        <name>MustField1__c</name>
+    </fields>
+    <fields>
+        <label><!-- MustField2 --></label>
+        <name>MustField2__c</name>
+    </fields>
+    <fields>
+        <label><!-- MustSpecify3 --></label>
+        <name>MustSpecify3__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Must Specify Record --></label>
+        <name>Must_Specify_Record</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Ez Commit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Ez Commit</value>
+    </caseValues>
+    <fields>
+        <label><!-- Conflict Resolution 1 --></label>
+        <name>Conflict_Resolution_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conflict Resolution 2 --></label>
+        <name>Conflict_Resolution_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Picklist 1 --></label>
+        <name>Picklist_1__c</name>
+        <picklistValues>
+            <masterLabel>01</masterLabel>
+            <translation><!-- 01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02</masterLabel>
+            <translation><!-- 02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03</masterLabel>
+            <translation><!-- 03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04</masterLabel>
+            <translation><!-- 04 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Picklist 2 --></label>
+        <name>Picklist_2__c</name>
+        <picklistValues>
+            <masterLabel>05</masterLabel>
+            <translation><!-- 05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06</masterLabel>
+            <translation><!-- 06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07</masterLabel>
+            <translation><!-- 07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08</masterLabel>
+            <translation><!-- 08 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Picklist Test --></label>
+        <name>Picklist_Test__c</name>
+        <picklistValues>
+            <masterLabel>ab</masterLabel>
+            <translation><!-- ab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>b</masterLabel>
+            <translation><!-- b --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>c</masterLabel>
+            <translation><!-- c --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Test Diff --></label>
+        <name>Test_Diff__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Test__c</name>
+        <relationshipLabel><!-- Ez Commit --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <label><!-- Commit record type --></label>
+        <name>Commit_record_type</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

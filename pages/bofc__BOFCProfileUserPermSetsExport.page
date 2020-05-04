@@ -1,0 +1,3 @@
+<apex:page contentType="application/vnd.ms-excel#BOFC_Profile_User_PermissionSet.xls" readOnly="true">
+    <c:BOFCProfileUserPermSetsExportComp />
+</apex:page>

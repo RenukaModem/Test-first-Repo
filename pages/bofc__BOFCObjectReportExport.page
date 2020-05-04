@@ -1,0 +1,45 @@
+<apex:page id="pg" readOnly="true" standardStylesheets="false" contenttype="application/vnd.ms-excel#BOFCReportFieldReferences.xls" controller="bofc.BulkObjectReportAnalyzer" action="{!ShowResults}">
+<body>        
+        <apex:outputPanel rendered="{!AllowPageAccess==false && AppExpired}">
+        <div style="    background: red; width: 1215px; color: white;   text-align: center; font-size: 20px;">
+                 {!ExpirationMsg}
+        </div>
+        </apex:outputPanel>        
+            <apex:outputPanel rendered="{!AllowPageAccess}">
+                     <table style="border: 1px solid #CCC;">
+                         <tr><td colspan="4" style="font-weight: bold;background-color: darkcyan;border: 1px solid #CCC;color:white;"><center>Report References</center></td></tr> 
+                         <tr>
+                                 <td style="border: 1px solid #CCC;font-weight: bold;background-color: #CDEAA8;">
+                                   <center>  Field Name</center>
+                                 </td>
+                                 <td style="border: 1px solid #CCC;font-weight: bold;background-color: #CDEAA8;">
+                                    <center> Reference Type</center>
+                                 </td>
+                                 <td style="border: 1px solid #CCC;font-weight: bold;background-color: #CDEAA8;">
+                                   <center>  Report Name</center>
+                                 </td>
+                                 <td style="border: 1px solid #CCC;font-weight: bold;background-color: #CDEAA8;">
+                                   <center>  Report ID</center>
+                                 </td>
+                         </tr>
+                         <apex:repeat value="{!lBOFCReportResults}" var="l">
+                             <tr> 
+                                 <td style="border: 1px solid #CCC;"><center>
+                                     <apex:outputText value="{!l.name}"/>
+                                 </center></td>
+                                 <td style="border: 1px solid #CCC;"><center>
+                                     <apex:outputText value="{!l.bofc__Type__c}"/> </center>
+                                 </td>
+                                 <td style="border: 1px solid #CCC;"><center>
+                                     <apex:outputText value="{!l.bofc__RName__c}"/> </center>
+                                 </td>
+                                 <td style="border: 1px solid #CCC;"><center>
+                                     <apex:outputText value="{!l.bofc__RID__c}"/> </center>
+                                 </td>
+                             </tr>  
+                         </apex:repeat>
+                         
+                     </table> 
+             </apex:outputPanel>         
+   </body>                
+</apex:page>

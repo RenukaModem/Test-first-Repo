@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DestObj1</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DestObjs1</value>
+    </caseValues>
+    <fields>
+        <label><!-- DestObj2 --></label>
+        <name>DestObj2__c</name>
+        <relationshipLabel><!-- DestObjs1 --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Permission1 --></label>
+        <name>Permission1__c</name>
+    </fields>
+    <fields>
+        <label><!-- TestPicklist --></label>
+        <name>TestPicklist__c</name>
+        <picklistValues>
+            <masterLabel>a</masterLabel>
+            <translation><!-- a --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>b</masterLabel>
+            <translation><!-- b --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>c</masterLabel>
+            <translation><!-- c --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>d</masterLabel>
+            <translation><!-- d --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ef</masterLabel>
+            <translation><!-- ef --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>gh</masterLabel>
+            <translation><!-- gh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ijk</masterLabel>
+            <translation><!-- ijk --></translation>
+        </picklistValues>
+    </fields>
+    <recordTypes>
+        <label><!-- ICMARC --></label>
+        <name>ICMARC</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

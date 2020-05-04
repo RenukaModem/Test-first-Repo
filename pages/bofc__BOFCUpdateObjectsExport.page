@@ -1,0 +1,3 @@
+<apex:page contentType="application/vnd.ms-excel#ExportMultipleObjects.xls" cache="true">
+<c:BOFCUpdateObjectsExportComp />
+</apex:page>

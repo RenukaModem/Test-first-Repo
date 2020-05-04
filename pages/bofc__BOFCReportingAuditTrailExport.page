@@ -1,0 +1,113 @@
+<apex:page controller="bofc.BOFCReportingAuditTrailExport" contentType="application/vnd.ms-excel#AuditTrail.xls" cache="true" readOnly="true">
+<apex:outputText value="{!xlsHeader}"/>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <Styles>
+    <Style ss:ID="objectTitle">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Center" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="1" ss:Size="10" ss:Color="#ffffff" ss:Family="Calibri"/>
+        <Interior ss:Color="#1f497d" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="heading">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Center" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="1" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#b8cce4" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="simpleDataLeft">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Left" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="0" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="simpleDataRight">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Right" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="0" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#ffffff" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="true">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Left" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="1" ss:Size="10" ss:Color="#000000"/>
+        <Interior ss:Color="#c6efce" ss:Pattern="Solid"/>
+    </Style>
+    <Style ss:ID="false">
+        <Alignment ss:Vertical="Center" ss:Horizontal="Left" />
+        <Borders>
+            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" />
+            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" />
+        </Borders>
+        <Font ss:Bold="1" ss:Size="5" ss:Color="#000000"/>
+        <Interior ss:Color="#ffc7ce" ss:Pattern="Solid"/>
+    </Style>
+ </Styles>
+ 
+     <Worksheet ss:Name="Audit Trail">
+        <Table x:FullColumns="1" x:FullRows="1">
+            <Column ss:AutoFitWidth="1"  ss:Width="217" />
+            <Column ss:AutoFitWidth="1"  ss:Width="217" />
+            <Column ss:AutoFitWidth="1"  ss:Width="217" />
+            <Column ss:AutoFitWidth="1"  ss:Width="217" />
+            <Column ss:AutoFitWidth="1"  ss:Width="217" />
+            <Row>
+                <Cell ss:StyleID="objectTitle" ss:MergeAcross="5"><Data ss:Type="String" >Audit Trails</Data></Cell>
+            </Row>
+            <Row>
+            <Cell ss:StyleID="heading"><Data ss:Type="String" >Component Type</Data></Cell>
+            <Cell ss:StyleID="heading"><Data ss:Type="String" >Action</Data></Cell>
+            <Cell ss:StyleID="heading"><Data ss:Type="String" >Description</Data></Cell>
+            <Cell ss:StyleID="heading"><Data ss:Type="String" >Changed By</Data></Cell>
+            <Cell ss:StyleID="heading"><Data ss:Type="String" >Date</Data></Cell>
+            
+            </Row>
+            
+            <apex:repeat value="{!lSetupAuditTrailWrap}" var="ac">
+            <Row>
+            <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!ac.Section}</Data></Cell>
+            <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!ac.action}</Data></Cell>
+            <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!ac.display}</Data></Cell>
+            <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!ac.CreatedByName}</Data></Cell>
+            <Cell ss:StyleID="simpleDataLeft"><Data ss:Type="String" >{!ac.CreatedDate}</Data></Cell>
+            </Row>
+            
+            </apex:repeat>
+            
+        </Table>
+    </Worksheet>
+ 
+    
+    
+</Workbook>
+</apex:page>

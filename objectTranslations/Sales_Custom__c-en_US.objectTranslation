@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sales Custom</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sales Custom</value>
+    </caseValues>
+    <fields>
+        <label><!-- Report Month --></label>
+        <name>Report_Month__c</name>
+    </fields>
+    <fields>
+        <label><!-- Report Year --></label>
+        <name>Report_Year__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

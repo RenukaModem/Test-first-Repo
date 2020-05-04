@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customApplications>
+        <label><!-- Bulk Object Field Creator --></label>
+        <name>Bulk_Object_Field_Creator</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Content Asset --></label>
+        <name>Content_Asset</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- OwnHouse --></label>
+        <name>OwnHouse</name>
+    </customApplications>
+    <customApplications>
+        <label><!-- Sample App --></label>
+        <name>Sample_App</name>
+    </customApplications>
+    <customLabels>
+        <label><!-- ac111 --></label>
+        <name>AC1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- AC211 --></label>
+        <name>AC2</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ACL24 --></label>
+        <name>ACL24</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- ACL25 --></label>
+        <name>ACL25</name>
+    </customLabels>
+    <customLabels>
+        <label>In English</label>
+        <name>Test1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- Test2 --></label>
+        <name>Test2</name>
+    </customLabels>
+    <customLabels>
+        <label>Hello AutoRABIT!!</label>
+        <name>Test_Custom_1</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- BOFCPurchaseLink --></label>
+        <name>bofc__BOFCPurchaseLink</name>
+    </customLabels>
+    <customLabels>
+        <label><!-- createdtoday --></label>
+        <name>createdtoday</name>
+    </customLabels>
+    <customTabs>
+        <label><!-- BOFC Home --></label>
+        <name>BOFC_Home</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- BOFC Home Lite --></label>
+        <name>BOFC_Home_Lite</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Bulk Object Field Creator --></label>
+        <name>Bulk_Object_Field_Creator</name>
+    </customTabs>
+    <customTabs>
+        <label><!-- Top Accounts and Opportunities --></label>
+        <name>Top_Accounts_and_Opportunities</name>
+    </customTabs>
+    <flowDefinitions>
+        <flows>
+            <fullName>MyFirstFlow-3</fullName>
+            <screens>
+                <fields>
+                    <name>FirstDate</name>
+                </fields>
+                <name>Address</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>EndPage</name>
+                </fields>
+                <name>End</name>
+            </screens>
+            <screens>
+                <fields>
+                    <name>WelcomeText</name>
+                </fields>
+                <name>Welcome</name>
+            </screens>
+        </flows>
+        <fullName>MyFirstFlow</fullName>
+    </flowDefinitions>
+    <flowDefinitions>
+        <flows>
+            <fullName>GetFeedbackSurveyFlowTemplate-1</fullName>
+            <screens>
+                <fields>
+                    <name>Flow_Survey</name>
+                </fields>
+                <name>GetFeedback_Survey</name>
+            </screens>
+        </flows>
+        <fullName>GetFeedbackSurveyFlowTemplate</fullName>
+    </flowDefinitions>
+    <quickActions>
+        <label><!-- Guest Community Case --></label>
+        <name>GuestCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- LogACall --></label>
+        <name>LogACall</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewAccount --></label>
+        <name>NewAccount</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewCase --></label>
+        <name>NewCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Community Case --></label>
+        <name>NewCommunityCase</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewContact --></label>
+        <name>NewContact</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewEvent --></label>
+        <name>NewEvent</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewGroup --></label>
+        <name>NewGroup</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewLead --></label>
+        <name>NewLead</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewNote --></label>
+        <name>NewNote</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewOpportunity --></label>
+        <name>NewOpportunity</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- New Opportunity --></label>
+        <name>NewOpportunity1</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- NewTask --></label>
+        <name>NewTask</name>
+    </quickActions>
+    <quickActions>
+        <label><!-- SendEmail --></label>
+        <name>SendEmail</name>
+    </quickActions>
+    <reportTypes>
+        <description><!-- Accounts with Entitlements with Contacts --></description>
+        <label><!-- Accounts with Entitlements with Contacts --></label>
+        <name>Accounts_with_Entitlements_with_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Entitlements --></label>
+            <name>Entitlements</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Doctor_Interactions --></description>
+        <label><!-- Doctor_Interactions --></label>
+        <name>Doctor_Interactions</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Service Contracts with Contract Line Items --></description>
+        <label><!-- Service Contracts with Contract Line Items --></label>
+        <name>Service_Contracts_with_Contract_Line_Items</name>
+        <sections>
+            <label><!-- Contract Line Items --></label>
+            <name>Contract Line Items</name>
+        </sections>
+        <sections>
+            <label><!-- Service Contracts --></label>
+            <name>Service Contracts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Service Contracts with Entitlements --></description>
+        <label><!-- Service Contracts with Entitlements --></label>
+        <name>Service_Contracts_with_Entitlements</name>
+        <sections>
+            <label><!-- Entitlements --></label>
+            <name>Entitlements</name>
+        </sections>
+        <sections>
+            <label><!-- Service Contracts --></label>
+            <name>Service Contracts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Testing Report Status --></description>
+        <label><!-- Testing Report Status --></label>
+        <name>Testing_Report_Status</name>
+        <sections>
+            <label><!-- Jefferies --></label>
+            <name>Jefferies</name>
+        </sections>
+    </reportTypes>
+</Translations>

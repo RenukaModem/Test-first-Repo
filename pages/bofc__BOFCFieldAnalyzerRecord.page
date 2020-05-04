@@ -1,0 +1,341 @@
+<apex:page standardController="bofc__BOFCFieldsAnalyzer__c" extensions="bofc.BOFCFieldAnalyzerRecord" sidebar="false" showHeader="false">
+    <apex:stylesheet value="{!URLFOR($Resource.bofc__BulkFieldCreator, 'ConfigBenchHomePage/css/style1.css')}"/> 
+ <style>
+        body .bPageTitle{
+        padding: 10px 0 0 !important;
+        }
+        
+        .contentLeft
+        {
+          float: left;
+        }
+        
+        footer
+        {
+         width:100%;
+         float:left;
+         margin-bottom: 10px;
+        }
+        
+        
+        .contentRight
+        {
+          float: left;
+          margin-left:10px;
+        }
+        
+        .home_icon
+        {
+          float:right;margin-top: 23px;font-size: 15px;padding-right: 50px;
+        }
+        .bPageTitle {
+              margin-bottom: 0px !important;
+         }
+         
+        .bPageTitle .ptBody .content{width:30% !important;}
+         
+        body{width:90% !important; margin:0 auto !important;}
+         
+            
+        .OCpageDescription{
+                font-size:25px;}
+                
+        .ptBody {
+              background-color: #fff !important;
+              padding: 0px;
+              color: #000;
+              padding: 0px 0 9px 0 !important;
+              clear: both;  
+              border-bottom: 8px solid #44BEEF;
+              position: fixed;
+              width: 90%;
+              z-index: 1111;
+            }
+              .OCpageType{
+                  font-size:11px;
+                  font-weight:bold;
+                  color:#000;
+                  
+              }      
+              
+             body .content{
+                width: 29%;
+              float: left;
+              
+            }
+            
+            form{
+              clear: both;
+            }
+            
+            .table_container
+            {
+             overflow-x:auto;
+            }
+            
+             #overlay
+            {
+              display: none;
+              position: fixed;
+              top: 0%;
+              left: 0%;
+              width: 100%;
+              height: 100%;
+              background-color: black;
+              z-index: 9999;
+              -moz-opacity: 0.8;
+              opacity: 0.5;
+              filter: alpha(opacity=80);
+            }
+            
+            #overlay .loadingImg
+            {
+                position: fixed;
+                top: 44%;
+                left: 44%;
+                text-align: center;
+            }
+            
+            .loadingImg img
+            {
+                width: 75px;
+                margin-bottom: 15px;
+            }
+            
+             #overlay span
+             {
+                 color: #fff;
+                 font-size: 16px;
+             }
+             
+             .tableContainer {
+                width: 99%;
+                height: auto;
+                overflow: auto;
+                margin-top: 10px;
+                }
+                
+              .tableHead
+              {
+                white-space: normal;
+              }  
+        body .bPageBlock {
+    padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-top-width: 3px;}
+        
+        body .content {
+    width: 50%;
+    float: left;
+}
+    </style>
+     <!--  1190 380 -->
+     
+     
+    <div class="ptBody secondaryPalette brandSecondaryBrd">
+        <div class="content">
+        <div class="content">
+            <h1 class="OCpageType">Salesforce BOFC</h1><br/>
+            <span class="titleSeparatingColon">:</span>
+            <h2 class="OCpageDescription">BOFC Field Analyzer</h2>
+            <div class="blank"></div>
+        </div>
+        </div>
+        <div class="home_icon" style="padding-right: 10px;"><a href="/home/home.jsp" target="_blank" style="color:blue;font-size:13px;">Salesforce Home</a></div>
+        <div class="home_icon" style="padding-right: 10px;"><a href="/apex/BOFCHome" target="_blank" style="color:blue;font-size:13px;">BOFC Home</a></div>
+        
+    </div>
+    
+    <apex:messages style="color:red"/>
+    <!-- <apex:includeScript value="{!URLFOR($Resource.Field_Trip__FieldTripGear, 'jQuery_1_7_1.js')}" />
+    -->
+    <style>
+        .secret{
+            visibility: hidden;
+        }
+    </style>
+
+    <script type='text/javascript'>
+    
+        var countDown = 2;
+        var started = false;
+        
+        function resetTimer(){
+        
+            countDown=2;
+            
+            if(started==false){
+                started=true;
+                runCountDown();
+            }
+        }
+        
+        function runCountDown(){
+        
+            countDown--;
+            
+            if(countDown<=0){
+                checkForErrors();
+                started=false;
+            }
+            else{
+                window.setTimeout(runCountDown,1000);
+            }
+        }
+        
+        function addToOnload(fn) {
+            var old = window.onload;
+            window.onload = function() {
+                old();
+                fn();
+            }
+        }
+        
+        function loadListener(){
+            
+            $("#mainObjectSelect").on('input', function () {
+                var val = this.value;
+                changeObject(this.value);
+            });
+        }
+        
+        addToOnload(loadListener);
+/*
+        function moveMoreObjects() {
+            var $mainObjectSelect = $("select[id*='mainObjectSelect']").first();
+            var $moreObjectSelect = $("select[id*='moreObjectSelect']").first();
+            $moreObjectSelect.find('option').clone().appendTo($mainObjectSelect);
+        }
+
+        addToOnload(moveMoreObjects);
+*/        
+      
+
+    </script>
+    
+    <apex:form >
+    
+        <apex:actionFunction name="checkForErrors" reRender="errorPanel"/>
+        <apex:actionFunction name="changeObject" reRender="queryRoot,errorPanel0,errorPanel">
+            <apex:param name="firstParam" assignTo="{!theRecord.bofc__Object_Name__c}" value="" />
+        </apex:actionFunction>
+
+    
+        <apex:pageBlock >
+            <br/>
+            <apex:outputText >
+                <b>Give your Field Analyzer a name</b> (e.g. 'All Accounts','Closed Cases','Opps created this year',etc)
+            </apex:outputText>
+            <br/>
+            <ul>
+                <apex:inputText value="{!theRecord.Name}" style="border-left:3px solid red; border-top:1px solid gray; width:250px"/>
+            </ul>
+            <br/>
+            <apex:outputText >
+                <b>Select Object which you want to analyze</b>
+            </apex:outputText>
+            <br/>
+            <ul>
+<!--            
+            <apex:actionRegion renderRegionOnly="false" immediate="true">
+                <apex:selectList id="mainObjectSelect" value="{!theRecord.bofc__Object_Name__c}" multiselect="false" size="1" style="border-left:3px solid red; border-top:1px solid gray">
+                    <apex:selectOptions value="{!objectNames}"/>
+                    <apex:actionSupport event="onchange" reRender="queryRoot,errorPanel"/>
+                </apex:selectList>
+            </apex:actionRegion>
+-->
+ 
+            <apex:selectList value="{!theRecord.bofc__Object_Name__c}" size="1">
+                <apex:selectOptions value="{!apiSelectOption}"/>
+            </apex:selectList>
+           <!-- <input id="mainObjectSelect" list="objResults" value="{!theRecord.bofc__Object_Name__c}" onkeyup="updateObjectList(this.value,event);" style="border-left:3px solid red; border-top:1px solid gray"/>-->
+            <datalist id="objResults"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:outputPanel id="errorPanel0" style="color:red">
+                <apex:outputText rendered="{!objectStringHasError}">
+                    Please enter a valid Object API Name
+                </apex:outputText>
+            </apex:outputPanel>
+
+            </ul>
+            <br/>
+            <apex:outputText >
+            <b>You can analyze only a subset of your records by adding a SOQL filter below</b>
+            <apex:outputPanel id="tellMore">
+                &nbsp;&nbsp;<apex:commandLink action="{!moreInfoFlip}" value="tell me more..." reRender="moreInfo,tellMore" rendered="{!NOT(moreInfo)}"/>
+            </apex:outputPanel>
+            </apex:outputText>
+            <br/>
+            <b>To analyze all records, leave this blank</b>
+            <br/>
+            <ul>
+            
+                <apex:outputPanel id="queryRoot">
+                    SELECT (all fields) FROM {!theRecord.bofc__Object_Name__c} WHERE&nbsp;
+                </apex:outputPanel>
+                <apex:actionRegion renderRegionOnly="false" immediate="true">
+                    <apex:inputText maxlength="1000" size="70" value="{!theRecord.bofc__Filter__c}" onkeydown="resetTimer()"/>
+                </apex:actionRegion>
+                <br/>
+                <apex:outputPanel id="errorPanel" style="color:red">
+                    <apex:outputText rendered="{!queryStringHasError}">
+                        Warning: Your SOQL filter does not appear to be valid, continuing may result in a failed analysis.
+                    </apex:outputText>
+                   
+                </apex:outputPanel>
+                <br/>
+                <apex:outputPanel id="moreInfo">
+                <apex:outputPanel style="color:blue" rendered="{!moreInfo}">
+                    <div style="padding:20px 0 4px 0; font-weight:bold">
+                        What do you mean by subset?
+                    </div>
+                    <div style="padding:0 0 13px 20px; font-size:9pt">
+                        Leaving this box empty will result in Field Trip including all the records for the given object in the analysis. So the end result will tell you how many times each field is populated in your entire database. 
+                        This option is here in case you wish to limit the analysis in order to get results about only records that match certain criteria. For example, you may want to know which fields are being used and which are not for a specific 
+                        record type, or maybe only for records created within a certain date range.
+                    </div>
+                    <div style="padding:0 0 4px 0; font-weight:bold">
+                        Why not user-friendly filters like I see in salesforce reporting, workflow, etc.?
+                    </div>
+                    <div style="padding:0 0 13px 20px; font-size:9pt">
+                        Excellent question... we're working on it! It's a difficult task to replicate the user-friendly methods 
+                        that salesforce provides to capture filter definitions, and rather than make you wait around for us to pull it off 
+                        we wanted to give you at least <i>some</i> way to limit the records being analyzed, so we allow for SOQL filtering. 
+                    </div>
+                    <div style="padding:0 0 4px 0; font-weight:bold">
+                        What is SOQL?
+                    </div>
+                    <div style="padding:0 0 13px 20px; font-size:9pt">
+                        "SOQL" is something that developers use when they want to request data from the salesforce servers either through the API (such as integrations, or third party apps) or through Apex code. 
+                        If you are not a developer or someone who is comfortable with SOQL you should leave this blank.
+                    </div>
+                    <div style="padding:0 0 4px 0; font-weight:bold">
+                        How can I learn more about SOQL?
+                    </div>
+                    <div style="padding:0 0 13px 20px; font-size:9pt">
+                        You can read all about SOQL and get some good examples of queries by reading the <a href="http://www.qandor.com/soqlInfoRedirect" target="_blank">SOQL documentation</a>.
+                    </div>
+                    <apex:commandLink action="{!moreInfoFlip}" value="hide this info" reRender="moreInfo,tellMore"/>
+                </apex:outputPanel>
+                </apex:outputPanel>
+            </ul>
+            <br/>
+            <br/>
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!goSave}" value="Save"/>
+                <apex:commandButton action="{!goSaveAndAnalyze}" value="Save and Analyze"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+            
+        </apex:pageBlock>
+<!--        
+        <apex:outputPanel >
+           <apex:selectList id="moreObjectSelect" styleClass="secret" size="1">
+               <apex:selectOptions value="{!moreOptions}"/>
+           </apex:selectList>
+        </apex:outputPanel>
+-->
+    </apex:form>
+    
+</apex:page>

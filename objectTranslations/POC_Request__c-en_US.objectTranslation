@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>POC Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>POC Request</value>
+    </caseValues>
+    <fieldSets>
+        <label><!-- Test --></label>
+        <name>Test</name>
+    </fieldSets>
+    <fields>
+        <label><!-- New Field --></label>
+        <name>New_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percentage --></label>
+        <name>Percentage__c</name>
+    </fields>
+    <quickActions>
+        <label><!-- VisualForce --></label>
+        <name>VisualForce</name>
+    </quickActions>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please put right details --></errorMessage>
+        <name>New_Validation_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Error please enter valid data to get proper result --></errorMessage>
+        <name>Validation_rule</name>
+    </validationRules>
+</CustomObjectTranslation>

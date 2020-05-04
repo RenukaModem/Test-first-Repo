@@ -1,0 +1,3 @@
+<apex:page readOnly="true" tabstyle="bofc__BOFCFieldsAnalyzer__c" title="BOFC Field Analyzer" sidebar="false" showHeader="false">
+    <c:BOFCFieldsAnalyzerComp />    
+</apex:page>

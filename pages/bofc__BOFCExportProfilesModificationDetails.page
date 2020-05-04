@@ -1,0 +1,3 @@
+<apex:page contentType="application/vnd.ms-excel#ExportProfileModifiedDetails.xls" cache="true" readOnly="true">
+<c:BOFCExportProfilesModificationComp />
+</apex:page>

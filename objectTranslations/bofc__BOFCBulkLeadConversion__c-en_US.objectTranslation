@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>bofc__Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>bofc__Account__c</name>
+        <relationshipLabel><!-- BOFCBulkLeadConversions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>bofc__Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>bofc__Contact__c</name>
+        <relationshipLabel><!-- BOFCBulkLeadConversions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>bofc__Opportunity__c</name>
+        <relationshipLabel><!-- BOFCBulkLeadConversions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>bofc__User__c</name>
+        <relationshipLabel><!-- BOFCBulkLeadConversions --></relationshipLabel>
+    </fields>
+</CustomObjectTranslation>

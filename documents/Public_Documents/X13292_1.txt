@@ -1,0 +1,129 @@
+checkOS:
+
+checkmodificaionexist:
+SCM host is : git
+
+clean:
+[echo] ${build.number}
+[delete] Deleting directory /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/build
+[delete] Deleting directory /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/dist
+[delete] Deleting directory /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/test-repo
+
+init:
+[mkdir] Created dir: /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/test-repo
+[mkdir] Created dir: /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/build
+[mkdir] Created dir: /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/dist
+[mkdir] Created dir: /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/build/test/frt/selenium
+[mkdir] Created dir: /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/build/test/frt/selenium/resources
+
+update-buildnumber:
+[propertyfile] Updating property file: /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/build.number
+[echo] 4
+Service Url : http://localhost:8955/rabit/agentservices?wsdl
+orgname : voya.com projectname : Support-ACCP buildnumber : 4 buildforced : true agentname : ip-145-10-181-236 status : Inprogress logid : 20181101185549
+Success
+[echo] sending status to server.
+
+invokebuild:
+
+scmbuild:
+[echo] Detected protocol git@204.86.57.66:Voya/Salesforce_SupportOrg.git
+[echo] ssh protocol
+
+checkout:
+
+git-checkout:
+[echo] Updating working copy for voya.com_Support-ACCP
+[echo] ZipSrc Path : /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP/customDeploy
+
+git-build:
+[echo] /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP
+[echo] 46337ad
+
+update-revision:
+[copy] Copying 1 file to /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP
+[echo] Updating revision number file
+[propertyfile] Updating property file: /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/revision.number
+[delete] Deleting directory /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP/customDeploy
+[mkdir] Created dir: /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP/customDeploy
+[echo] almworkflowenabled :false;customlabel : false
+[echo] Preparing log between these revisions = ec73931f96 : HEAD
+Cijob settings filepath : /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/cijobsettings.properties
+Project checkout path : /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP
+OrgName : voya.comSame remote url found. Updating working copy.
+OrgName : voya.com Executing custom API
+From Revision : ec73931f96 To Revision : 46337ad
+Changelist generated.
+prepareDestructive is : false
+Process Start Time : Thu Nov 01 18:56:20 UTC 2018
+::::::::ValidateDeployablemetadataSchemaCalled::::::::::-With REVISION
+In validateDeployableMetaDataSchema:::::::startTime::Thu Nov 01 18:56:20 UTC 2018 directoryPath::/opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP lastCall::false
+In validateDeployableMetaDataSchema:::::::End Time::Thu Nov 01 18:56:20 UTC 2018
+In validateDeployableMetaDataSchema:::::::startTime::Thu Nov 01 18:56:20 UTC 2018 directoryPath::/opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP/customDeploy lastCall::true
+In validateDeployableMetaDataSchema:::::::End Time::Thu Nov 01 18:56:20 UTC 2018
+Changed files count : 16
+profile
+profile
+profile
+object
+profile
+profile
+profile
+profile
+profile
+profile
+workflow
+
+Finished all threads
+Total Build Time : 1312
+Checking if the source in DX format. rootDirPath:: /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP
+Is the source in DX format :: false
+Checking if the source in DX format. rootDirPath:: /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP/customDeploy
+Is the source in DX format :: false
+Prepared package manifest.
+Package xml file path : /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP/customDeploy/package.xml
+Preparing the dynamic package.xml file.
+Saved package manifest.
+[echo] repository revision is 46337ad
+
+package:
+[echo] Zip source is : /opt/newhd/rabitinstall/rba/buildagent/projects/voya.com_Support-ACCP/customDeploy
+
+update-profiles:
+started time Thu Nov 01 18:56:22 UTC 2018
+Reading PackageManifest file.
+Preparing Dataset using PackageManifest file.
+Updating profile :Admin
+Updating profile :Delivery Manager
+Updating profile :Developer
+Updating profile :Premier Support User
+Updating profile :Quality Assurance Team
+Updating profile :ReadOnly
+Updating profile :Standard
+Updating profile :Web BA Team
+Updating profile :Web Prod Team
+ended time Thu Nov 01 18:56:22 UTC 2018
+start Time::Thu Nov 01 18:56:23 UTC 2018
+[copy] Copying 1 file to /home/ubuntu/.rabit/ftp/voya.com/Support-ACCP/build.4
+[zip] Building zip: /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/dist/Support-ACCP.zip
+[copy] Copying 1 file to /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/dist
+[echo] Packaging completed successful.
+[echo] Your branch is up-to-date with 'origin/Rel-2018-Oct'.
+[copy] Copying 1 file to /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/dist
+
+publish-test:
+[echo] test src : ${test.src}, test labels : ${test.labels}, test types : ${test.types}
+[echo] Test cases source not found
+
+publish-artifacts:
+Upload artifact request with parameters : orgName : voya.com ProjectName : Support-ACCP BuildNumber : 4 FileName : Support-ACCP.zip SourcePath : /opt/newhd/rabitinstall/rba/buildagent/automation-scripts/voya.com_Support-ACCP/dist wsdl url : http://localhost:8955/rabit/agentservices?wsdl
+[echo] Project build artifacts uploaded.
+[echo] Revision Range : ec73931f96..46337ad
+Service Url : http://localhost:8955/rabit/agentservices?wsdl
+orgname : voya.com projectname : Support-ACCP buildnumber : 4 buildforced : true agentname : ip-145-10-181-236 status : Completed logid : 20181101185549
+From Revision : ec73931f96 To Revision : 46337ad
+Success
+[echo] sending status to server.
+
+BUILD SUCCESSFUL
+Total time: 43 seconds

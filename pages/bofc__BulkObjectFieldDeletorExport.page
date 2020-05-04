@@ -1,0 +1,17 @@
+<apex:page controller="bofc.BulkObjectFieldDeletor" cache="true" showHeader="false" sidebar="false" readOnly="true" standardStylesheets="false" contentType="application/vnd.ms-excel; charset=Windows-1252#Report.xls ">
+  <table style="text-align:center;border:1px;">
+      <tr>    
+              <td style="vertical-align:middle; text-align:left;border:1px solid #000;">Field Label</td>
+              <td style="vertical-align:middle; text-align:left;border:1px solid #000;">Field Name</td>
+              <td style="vertical-align:middle; text-align:center;border:1px solid #000;">Field Status</td>
+      </tr>
+      <apex:repeat value="{!lBOFCErrorLogs}" var="ac">
+          <tr>
+              <td style="vertical-align:middle; text-align:left;border:1px solid #000;">{!ac.bofc__Field_Label__c}</td>
+              <td style="vertical-align:middle; text-align:left;border:1px solid #000;">{!ac.bofc__Field_Name__c}</td>
+              <td style="vertical-align:left; text-align:center;border:1px solid #000;">{!ac.bofc__Field_Error_Desc__c}</td>
+              
+          </tr>
+      </apex:repeat>
+  </table>
+</apex:page>

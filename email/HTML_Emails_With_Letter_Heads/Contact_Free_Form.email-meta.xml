@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Free Form Branded for Use</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SampleLetter</letterhead>
+    <name>Contact Free Form</name>
+    <style>freeForm</style>
+    <subject>Sample Product Review</subject>
+    <textOnly>Dear</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,3 @@
+<apex:page cache="true" contentType="application/vnd.ms-excel#ExportAssignmentRules.xls">
+    <c:BOFCAssignmentRulesExportComp />
+</apex:page>

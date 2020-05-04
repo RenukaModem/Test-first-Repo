@@ -1,0 +1,31 @@
+<table cellspacing="10" style="font-family:Calibri">
+<tr>
+<td> <a style="
+                image-rendering: -moz-crisp-edges;                                                      /* Firefox */
+                image-rendering:   -o-crisp-edges;                                                         /* Opera */
+                image-rendering: -webkit-optimize-contrast;                                           /* Webkit (non-standard naming) */
+                image-rendering: crisp-edges; -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+        ">
+        <img src="https://kcura.my.salesforce.com/servlet/servlet.ImageServer?id=01550000002qWJO&oid=00D5000000072uY" width="307" ​ALT="Relativity"> </a> </td>
+</tr>
+<tr>
+<td width=600px>
+<br>
+<br>
+Hi {!Contact.FirstName},<br>
+<br>
+It is time to perform a quarterly audit of your Relativity environment for the Best in Service program.  Please run the attached script from within Relativity’s Admin Mode with the following inputs:<br>
+<br>
+Start Date: 04/01/2011<br>
+End Date: 06/30/2011<br>
+Partner ID: <b>XXXXXXX</b><br>
+<br>
+Please return your results to <a href="mailto:support@relativity.com">support@relativity.com</a> by <b>DEADLINE</b>.  If you have any questions about running this script, please <a href="mailto:support@relativity.com">email us</a>.<br>
+<br>
+Thanks so much,<br>
+ <br>
+The Relativity Support Team<br>
+<a href="mailto:support@relativity.com">support@relativity.com</a><br>
+(312) 676-5099
+</td>
+</table>

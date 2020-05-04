@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Account/Contract</fullName>
+        <default>false</default>
+        <label>Account/Contract</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CTI</fullName>
+        <default>false</default>
+        <label>CTI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Customer Care Process</fullName>
+        <default>false</default>
+        <label>Customer Care Process</label>
+    </standardValue>
+    <standardValue>
+        <fullName>DigiQ</fullName>
+        <default>false</default>
+        <label>DigiQ</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Easy Sales</fullName>
+        <default>false</default>
+        <label>Easy Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ELLA</fullName>
+        <default>false</default>
+        <label>ELLA</label>
+    </standardValue>
+    <standardValue>
+        <fullName>I2P</fullName>
+        <default>false</default>
+        <label>I2P</label>
+    </standardValue>
+</StandardValueSet>

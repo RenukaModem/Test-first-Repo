@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>activities</category>
+    <deployed>true</deployed>
+    <description>True</description>
+    <label>Testing Report Status</label>
+    <sections>
+        <masterLabel>Jefferies</masterLabel>
+    </sections>
+</ReportType>

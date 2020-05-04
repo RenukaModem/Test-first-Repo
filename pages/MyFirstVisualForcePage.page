@@ -1,0 +1,4 @@
+<apex:page > 
+    <h1>Welcome to Salesforce</h1><br/>
+    This is your new Page 
+</apex:page>

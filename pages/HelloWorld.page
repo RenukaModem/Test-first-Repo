@@ -1,0 +1,16 @@
+<apex:page standardController="POC_Request__c" tabStyle="POC_Request__c">
+<apex:message />
+    <apex:detail inlineEdit="true" oncomplete="hide()"/>
+    <apex:actionSupport />
+    <script type="text/javascript">
+        function hide(){
+            var allTdTags = document.getElementsByTagName('td');
+            for(var i=0;i<allTdTags.length;i++){      
+                if(allTdTags[i].className == 'pbButton'){
+                    document.getElementsByName('piSubmit')[0].style.display = "none";         
+                }
+            }
+        }
+        hide();
+    </script>
+</apex:page>
